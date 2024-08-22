@@ -1,30 +1,25 @@
 // utils.js
+function calculateNumber(type, a, b) {
+  const roundedA = Math.round(a);
+  const roundedB = Math.round(b);
 
-class Utils {
-  static calculateNumber(type, a, b) {
-    const roundedA = Math.round(a);
-    const roundedB = Math.round(b);
-    let result = 0;
-    switch (type) {
-      case 'SUM':
-        result = roundedA + roundedB;
-        break;
-      case 'SUBTRACT':
-        result = roundedA - roundedB;
-        break;
-      case 'DIVIDE':
-        if (roundedB === 0) {
-          result = 'Error';
-        } else {
-          result = roundedA / roundedB;
-        }
-        break;
-      default:
-        result = 'Error';
-        break;
-    }
-    return result;
+  if (type === 'SUM') {
+    return roundedA + roundedB;
   }
+  if (type === 'SUBTRACT') {
+    return roundedA - roundedB;
+  }
+  if (type === 'DIVIDE') {
+    if (roundedB === 0) {
+      return 'Error';
+    }
+    return roundedA / roundedB;
+  }
+  throw new Error('Invalid type');
 }
+
+const Utils = {
+  calculateNumber,
+};
 
 module.exports = Utils;
