@@ -1,10 +1,16 @@
 {
   "name": "task_0",
   "version": "1.0.0",
+  "description": "",
+  "main": "2-calcul_chai.js",
   "scripts": {
     "test": "mocha"
   },
+  "type": "commonjs",
+  "dependencies": {
+    "chai": "^4.5.0"
+  },
   "devDependencies": {
-    "mocha": "^10.7.3"
+    "mocha": "^10.2.0"
   }
 }
