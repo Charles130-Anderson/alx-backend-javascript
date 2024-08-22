@@ -2,15 +2,16 @@
   "name": "task_0",
   "version": "1.0.0",
   "description": "",
-  "main": "2-calcul_chai.js",
+  "main": "3-payment.js",
   "scripts": {
     "test": "mocha"
   },
-  "type": "commonjs",
+  "type": "commonjs",  // Ensure this is correct for your setup
   "dependencies": {
     "chai": "^4.5.0"
   },
   "devDependencies": {
-    "mocha": "^10.2.0"
+    "mocha": "^10.2.0",
+    "sinon": "^13.0.0"  // Ensure Sinon is included
   }
 }
